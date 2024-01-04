@@ -17,26 +17,46 @@
         <java.version>17</java.version>
     </properties>
     <dependencies>
+        <!-- Spring Data JPA:
+            Ofrece una capa de abstracción sobre JPA para simplificar el acceso y la manipulación de datos en
+            bases de datos relacionales. -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
+
+        <!-- Spring Web:
+            Facilita el desarrollo de aplicaciones web mediante Spring MVC, permitiendo la creación de
+            controladores y el manejo de solicitudes HTTP. -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <!-- Spring Boot DevTools:
+                Me proporciona herramientas de desarrollo que me ayudan en la productividad, como
+                la recarga automática cuando se detectan cambios en el código fuente sin necesidad de
+                reiniciar la aplicación manualmente. -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
+
+        <!-- PostgreSQL Driver:
+                Proporciona la capacidad de conectarse a una base de datos PostgreSQL desde la
+                aplicación Spring Boot, permitiendo el intercambio de datos entre la aplicación
+                y la base de datos. -->
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <scope>runtime</scope>
         </dependency>
+
+        <!-- Lombok:
+            Reduce la verbosidad del código Java a través de anotaciones, permitiendo la generación
+            automática de métodos como getters, setters, constructores, etc., simplificando el desarrollo. -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
