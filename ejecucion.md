@@ -3,7 +3,7 @@ Ejecucion de la aplicación Spring Boot con Maven
 
 1. Asegúrarse de tener Maven instalado:
 Se debe verificar si Maven está instalado ejecutando mvn -v en la terminal o línea de comandos. Si no está 
-instalado, descárgalo e instálalo desde Maven Apache.
+instalado, descárgarlo e instálarlo desde Maven Apache.
 
 2. Ejecutar la aplicación:
 Abrir la terminal o línea de comandos, navegar al directorio raíz del proyecto donde se encuentra el 
