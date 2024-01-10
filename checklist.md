@@ -14,26 +14,27 @@ CHECKLIST
 -- CRUD DE USUARIOS
 - Crear paquetes necesarios para cada capa. -> (OK)
 
-- Crear todas las entidades que se van a necesitar para el proyecto -> ()
-*Entidad Usuarios -> (PENDIENTE DE TERMINACION - PARCIALMENTE)
-*Enum Estados -> () 
+- Crear todas las entidades que se van a necesitar para el proyecto -> (PENDIENTE)
+*Entidad Usuarios -> (OK)
+*Enum Estados -> (OK) 
 *Enum de Roles -> ()
 
-- Crear todos los repositorios que se van a necesitar para el proyecto -> (PENDIENTE DE TERMINACION - PARCIALMENTE)
-*Repositorio Usuarios -> (PENDIENTE DE TERMINACION - PARCIALMENTE)
+- Crear todos los repositorios que se van a necesitar para el proyecto -> (PENDIENTE)
+*Repositorio Usuarios -> (OK)
 
-- Crear todos los servicios que se van a necesitar para el proyecto -> () 
-*Service Usuarios -> (PENDIENTE DE TERMINACION - PARCIALMENTE)
+- Crear todos los servicios que se van a necesitar para el proyecto -> (PENDIENTE) 
+*Service Usuarios -> (PENDIENTE)
 
-- Crear todos los restcontrollers que se van a necesitar para el proyecto -> ()
-*Controller Usuarios -> (PENDIENTE DE TERMINACION - PARCIALMENTE)
+- Crear todos los RestControllers que se van a necesitar para el proyecto -> (PENDIENTE)
+*RestController Usuarios -> (PENDIENTE)
 
-- Crear los endpoints para probar desde el postman -> (PENDIENTE DE TERMINACION - PARCIALMENTE)
-
-
+- Crear los endpoints para probar desde el postman -> (OK)
 
 
+- Crear formularios HTML para la parte del Frontend -> (OK)
 
+- Crear todos los Controllers que se van a necesitar para el proyecto -> (OK)
 
-- Crear formularios en HTML para el CRUD final -> (NO ME SALIO)
+- Agregar Swagger.
+
 

@@ -1,17 +1,21 @@
-<!-- form.html -->
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Formulario</title>
-</head>
-<body>
-    <h1>Crear Nuevo Usuario</h1>
-    <!--<form action="/add" method="post">-->
-    <form th:action="@{/add}" th:object="${duplicatsForm}" method="POST">
-        <input type="text" name="username" placeholder="Nombre de usuario">
-        <input type="text" name="password" placeholder="Password">
-        <button type="submit">Enviar</button>
-    </form>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Listado</title>
+    </head>
+    <body class="hold-transition sidebar-mini">
+        <form th:action="@{/app/usuarios/create}" th:object="${usuarioDTO}" method="post">
+            <h4>Formulario de Usuarios</h4>
+            <label for="username">Nombre Usuario</label>
+            <input name="username" th:field="*{username}" type="text" class="" required minlength="2" maxlength="255">
+            <label for="password">Password</label>
+            <input name="password" th:field="*{password}" type="text" class="" required>
+            <label for="email">Email</label>
+            <input name="email" th:field="*{email}" type="text" class="" required>
+            <button type="submit" class="">
+                Guardar
+            </button>
+        </form>
+    </body>
 </html>

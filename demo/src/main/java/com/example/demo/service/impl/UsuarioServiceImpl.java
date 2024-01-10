@@ -93,7 +93,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 
             return usuarioDTO;
         } catch (Exception e) {
-            log.error("Error en el service buscar marca por Nombre: {}", e.getMessage());
+            log.error("Error en el service buscar usuario por Nombre: {}", e.getMessage());
             throw new Exception("Error en el service buscar usuario por Nombre");
         }
     }
@@ -111,10 +111,9 @@ public class UsuarioServiceImpl implements UsuarioService {
 
             return usuarioDTO;
         } catch (Exception e) {
-            log.error("Error en el service buscar marca por Estado: {}", e.getMessage());
+            log.error("Error en el service buscar usuario por Estado: {}", e.getMessage());
             throw new Exception("Error en el service buscar usuario por Estado");
         }
     }
-
 
 }

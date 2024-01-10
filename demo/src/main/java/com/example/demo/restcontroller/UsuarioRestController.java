@@ -8,49 +8,34 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-/**
- * RestControlador para gestionar las operaciones relacionadas con los usuarios.
- * Este Restcontrolador maneja solicitudes relacionadas con la gestión de usuarios, como
- * la creación, actualización y eliminación de usuarios.
- */
 @RestController
-@RequestMapping("/usuarios")
+@RequestMapping("/api/usuarios")
 @Slf4j
 public class UsuarioRestController {
     @Autowired
     private UsuarioService service;
 
-    /**
-     * Crea un nuevo registro de Usuarios en la base de datos.
-     * @param UsuarioDTO DTO que contiene la información del nuevo Usuario.
-     * @return ResponseEntity
-     */
-    @PostMapping("/add")
-    public ResponseEntity<?> add(@RequestBody UsuarioDTO usuarioDTO) {
-        log.info("username: {}", usuarioDTO.getUsername());
-        log.info("RestController de usuarios - Inicia proceso de Guardar en Base de datos el usuario");
 
+    @PostMapping("/create")
+    public ResponseEntity<?> create(@RequestBody UsuarioDTO usuarioDTO) {
         try {
-            return ResponseEntity.ok(service.create(usuarioDTO)); //retorno el id creado.
+            return ResponseEntity.ok(service.create(usuarioDTO));
         } catch (Exception e) {
-            log.error("Error en la petición para crear nuevo Usuario: {}", e.getMessage());
+            log.error("Error al crear nuevo usuario: {}", e.getMessage());
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
     }
 
-    @PutMapping("/edit/{id}")
-    public ResponseEntity<?> edit(@PathVariable(name = "id") Long id, @RequestBody UsuarioDTO usuarioDTO) {
-        log.info("username: {}", usuarioDTO.getUsername());
-        log.info("RestController de usuarios - Inicia proceso de Actualizacion en Base de datos del usuario");
+    @PutMapping("/update/{id}")
+    public ResponseEntity<?> update(@PathVariable(name = "id") Long id, @RequestBody UsuarioDTO usuarioDTO) {
         try {
             service.update(id, usuarioDTO);
             return ResponseEntity.ok("Actualizado Exitosamente!");
         } catch (Exception e) {
-            log.error("Error en la petición actualizar usuario existente: {}", e.getMessage());
+            log.error("Error al actualizar usuario: {}", e.getMessage());
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
-
 
     @GetMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable("id") Long id) {
@@ -58,18 +43,18 @@ public class UsuarioRestController {
             service.delete(id);
             return ResponseEntity.ok("Eliminado Exitosamente!");
         } catch (Exception e) {
-            log.error("Error en la petición eliminar: {}", e.getMessage());
+            log.error("Error al eliminar: {}", e.getMessage());
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
 
     }
 
-    @GetMapping
+    @GetMapping("/list")
     public ResponseEntity<?> list() {
         try {
             return ResponseEntity.ok(service.findAll());
         } catch (Exception e) {
-            log.error("Error en la petición de listado de Usuarios: {}", e.getMessage());
+            log.error("Error al listar usuarios: {}", e.getMessage());
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
     }
@@ -79,7 +64,7 @@ public class UsuarioRestController {
         try {
             return ResponseEntity.ok(service.getByUsername(usuarioDTO.getUsername()));
         } catch (Exception e) {
-            log.error("Error en la petición de buscar usuario por Nombre: {}", e.getMessage());
+            log.error("Error al buscar usuario por Nombre: {}", e.getMessage());
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
@@ -89,7 +74,7 @@ public class UsuarioRestController {
         try {
             return ResponseEntity.ok(service.getByEstado(usuarioDTO.getEstado()));
         } catch (Exception e) {
-            log.error("Error en la petición de buscar usuario por Estado: {}", e.getMessage());
+            log.error("Error al buscar usuario por Estado: {}", e.getMessage());
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
