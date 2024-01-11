@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Listado</title>
+    </head>
+    <body class="hold-transition sidebar-mini">
+        <form th:action="@{/etica/login}" th:object="${usuarioDTO}" method="post">
+            <h4>Formulario de Login</h4>
+            <label for="username">Usuario</label>
+            <input name="username" th:field="*{username}" type="text" class="">
+            <label for="password">Password</label>
+            <input name="password" th:field="*{password}" type="text" class="">
+            <button type="submit" class="">
+                Aceptar
+            </button>
+        </form>
+    </body>
+</html>

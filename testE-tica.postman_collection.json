@@ -21,15 +21,16 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/usuarios/add",
+					"raw": "http://localhost:8080/api/usuarios/create",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
+						"api",
 						"usuarios",
-						"add"
+						"create"
 					]
 				}
 			},
@@ -50,15 +51,16 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/usuarios/edit/1",
+					"raw": "http://localhost:8080/api/usuarios/update/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
+						"api",
 						"usuarios",
-						"edit",
+						"update",
 						"1"
 					]
 				}
@@ -92,14 +94,16 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/usuarios",
+					"raw": "http://localhost:8080/api/usuarios/list",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"usuarios"
+						"api",
+						"usuarios",
+						"list"
 					]
 				}
 			},
@@ -123,13 +127,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/usuarios/getByNombre",
+					"raw": "http://localhost:8080/api/usuarios/getByNombre",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
+						"api",
 						"usuarios",
 						"getByNombre"
 					]
@@ -155,13 +160,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/usuarios/getByEstado",
+					"raw": "http://localhost:8080/api/usuarios/getByEstado",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
+						"api",
 						"usuarios",
 						"getByEstado"
 					]

@@ -14,12 +14,12 @@ CHECKLIST
 -- CRUD DE USUARIOS
 - Crear paquetes necesarios para cada capa. -> (OK)
 
-- Crear todas las entidades que se van a necesitar para el proyecto -> (PENDIENTE)
+- Crear todas las entidades que se van a necesitar para el proyecto -> (OK)
 *Entidad Usuarios -> (OK)
 *Enum Estados -> (OK) 
 *Enum de Roles -> ()
 
-- Crear todos los repositorios que se van a necesitar para el proyecto -> (PENDIENTE)
+- Crear todos los repositorios que se van a necesitar para el proyecto -> (OK)
 *Repositorio Usuarios -> (OK)
 
 - Crear todos los servicios que se van a necesitar para el proyecto -> (PENDIENTE) 

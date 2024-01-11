@@ -116,4 +116,18 @@ public class UsuarioServiceImpl implements UsuarioService {
         }
     }
 
+
+    @Override
+    public boolean validaUsuario(UsuarioDTO usuarioDTO) throws Exception {
+        /*Logica basica para validar si un usuario existe o no para darle acceso a la aplicacion.*/
+        UsuarioDTO usuarioLogin = getByUsername(usuarioDTO.getUsername());
+        UsuarioDTO usuarioActivo = getByEstado(usuarioLogin.getEstado());
+        
+        if ((usuarioLogin != null) && (usuarioActivo != null)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }

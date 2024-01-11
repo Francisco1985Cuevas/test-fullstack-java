@@ -17,4 +17,6 @@ public interface UsuarioService {
     UsuarioDTO getByUsername(String username) throws Exception;
 
     UsuarioDTO getByEstado(Estado estado) throws Exception;
+
+    boolean validaUsuario(UsuarioDTO usuarioDTO) throws Exception;
 }
